@@ -39,7 +39,7 @@
                         <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
                             <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                                 </li>
                                 <li class="nav-item mx-2">
                                     <a class="nav-link" href="./pages/Contacto.html">Contacto</a>
@@ -61,8 +61,9 @@
                             <!--Login / Sign Up-->
 
                             <div 
-                            class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3 flex-column"
-                            <a href="#login" class="text-white">Login</a>
+                            class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3 flex-column">
+                            
+                            <a href="#login" class="text-white text-decoration-none px-3 py-1 rounded" style="background-color: coral;">Login</a> 
                             <a href="#signup" class="text-white text-decoration-none px-3 py-1 rounded"
                             style="background-color: goldenrod;">Sign Up</a>
                         </div>
@@ -75,7 +76,12 @@
         </header>
         <main class="contenido">
             <section class="hero">
-                <div id="carouselExample" class="carousel slide">
+                <div id="hero-carousel" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active c-item">
                             <img src="./img/Banner para tienda de joyería con polaroid color rosa.jpg" class="d-block w-100 c-img" alt="">
@@ -87,35 +93,24 @@
                             <img src="./img/Destacados porciento.jpg" class="d-block w-100 c-img" alt="">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
+                        
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                <!-- <div>
-                    <h1>Relojeria y Joyería Dionix</h1>
 
-                    <p>Conseguí todos los accesorios que buscas con la seguridad y confianza que te brindamos desde 1990, atendido por sus propios dueños en el corazón de la ciudad de Mar del Plata. Los mejores precios y la mejor calidad de atencion y productos. </p>
-                </div>
-
-                <div class="ubicacion">
-                    <h2> Encontranos frente al shopping paseo Aldrey!</h2>
-                
-                    <h3>Alberti 1683</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1749.2157306367137!2d-57.54391856003896!3d-38.01147125292167!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dc2315cd287d%3A0x6e6918db6ec4a106!2sDionix!5e0!3m2!1ses!2sus!4v1693743038529!5m2!1ses!2sus" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    BOTON -->
-    </div>
     </section>
 
     <section class="Destacados">
 
-        <h2>DESTACADOS DEL MES!</h2>
+        <h1>DESTACADOS DEL MES!</h1>
 
 
         <div class="productos-contenedor">
