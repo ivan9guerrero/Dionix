@@ -1,2 +1,267 @@
-h1 {
-  color: aqua; }
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;0,700;0,800;1,200;1,500;1,600;1,700;1,800&display=swap");
+/*!--------RESET----------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-repeat: no-repeat; }
+
+.grid-contenedor-contacto {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px 100 px 400px 150px;
+  grid-template-areas: "header header header" "nav nav nav" "main main aside" "footer footer footer"; }
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: coral; }
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ad7e08; }
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='coral' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+
+.navbar-dark .navbar-toggler {
+  border: 1px solid #938309; }
+
+.nav-link:hover {
+  color: #0c0c0c !important;
+  text-decoration: underline; }
+
+.header-contacto {
+  grid-area: header; }
+
+.navbar {
+  grid-area: nav; }
+
+/*!--------CATEGORIES---------*/
+.categories {
+  max-width: 90%;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 70px; }
+
+.category-item {
+  flex-grow: 1;
+  flex-basis: 0;
+  min-width: 33.33%;
+  border: 2px solid white;
+  box-sizing: border-box;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out; }
+  .category-item:hover {
+    opacity: 0.7;
+    background-color: #8e1919; }
+  .category-item a:hover {
+    color: black; }
+
+.category-item-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+
+.category-item-inner > div {
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.484);
+  color: white;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+/*!--------MAIN MAS Productos----------*/
+.productos-destacados {
+  margin-top: 30px;
+  max-width: 1200px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px; }
+
+.productos-destacados-title {
+  text-align: center;
+  margin-top: 20px; }
+
+.productos-destacados-item {
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid #ddd; }
+
+.productos-destacados-item-image {
+  height: 300px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.productos-destacados-item > .title {
+  font-size: 20px;
+  font-weight: bold; }
+
+.productos-destacados-item > .description {
+  color: #666; }
+
+.productos-destacados-item > .price {
+  font-style: italic; }
+
+button {
+  outline: none;
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px 0; }
+  button:hover {
+    transform: scale(1.1, 1.1); }
+
+/*!--------MAIN NOSOTROS----------*/
+.about-us {
+  width: 100%;
+  padding: 78px 0px;
+  background-color: white;
+  overflow: hidden; }
+
+.info-nosotros {
+  width: 100%;
+  max-width: 95%;
+  display: flex;
+  align-items: center; }
+  .info-nosotros img {
+    margin-right: 30px;
+    width: 65%;
+    height: auto;
+    padding: 50px;
+    float: left; }
+  .info-nosotros .nosotros-text h1 {
+    color: #333;
+    font-size: 40px;
+    margin-bottom: 20px; }
+  .info-nosotros .nosotros-text p {
+    color: #666;
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 45px;
+    text-align: justify;
+    text-transform: inherit;
+    float: left;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; }
+
+.about-us:hover .nosotros-text p {
+  opacity: 1;
+  visibility: visible; }
+
+.mapa {
+  background-color: #ffffff; }
+  .mapa .text-ubicacion {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out; }
+  .mapa .map-responsive {
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+    margin-bottom: none; }
+  .mapa .map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute; }
+  .mapa .text-pagos {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out; }
+  .mapa .medios-pagos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px; }
+  .mapa:hover .text-ubicacion {
+    transform: translateX(0); }
+  .mapa:hover .text-pagos {
+    transform: translateX(0); }
+
+.pie {
+  background-color: #807182;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.references ul {
+  list-style: none;
+  padding: 0; }
+
+.references li {
+  display: inline;
+  margin: 0 10px; }
+
+.references a :hover {
+  transform: scale(1.5, 1.5); }
+
+.references a :hover {
+  color: #b31616; }
+
+.inicio:hover {
+  transform: scale(1.5, 1.5); }
+
+.inicio a {
+  color: #f4f2ee; }
+  .inicio a:hover {
+    color: #070500; }
+
+.social-media {
+  align-items: end; }
+  .social-media a {
+    text-decoration: none;
+    color: white; }
+  .social-media img {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px; }
+
+.footer-contact {
+  max-width: 100%;
+  grid-area: footer; }
+
+@media (max-width: 1000px) {
+  .productos-destacados {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 800px) {
+  .productos-destacados {
+    grid-template-columns: 1fr; } }
+
+@media (max-width: 1000px) {
+  .category-item {
+    min-width: 50%; } }
+
+@media (max-width: 800px) {
+  .category-item {
+    min-width: 100%; } }

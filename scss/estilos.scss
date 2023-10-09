@@ -1,3 +1,6 @@
-h1{
-    color: aqua;
-}
+@import "./bases/variables";
+@import "./bases/generales";
+@import "./components/header";
+@import "./components/main";
+@import "./components/footer";
+@import "./bases/mediaquery";

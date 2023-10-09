@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;0,700;0,800;1,200;1,500;1,600;1,700;1,800&display=swap');
+
+
+
+
+/*!--------RESET----------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-repeat: no-repeat;
+
+
+    
+}
+
+.grid-contenedor-contacto{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px 100 px 400px 150px;
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "main main aside"
+    "footer footer footer"
+    ;
+}
