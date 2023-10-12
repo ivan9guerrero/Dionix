@@ -1,0 +1,47 @@
+/*!--------VARIABLES----------*/
+//!VARIABLES
+$color-principal: #ffffff;
+$color-secundario: #807182;
+$color-terciario:#000000;
+$color-parrafos:#666;
+$color-nosotros: #333;
+$color-contacto-form:rgb(229, 187, 0);
+$color-botonpri:#c1b688;
+
+//!LISTAS
+
+$font-size:
+15px, 16px, 20px, 22px, 30px, 40px;
+
+//!MAPAS
+
+$boton:(
+    fondo: black,
+    border: none,
+    color-texto:white,
+);
+
+
+//!EXTENDS
+
+%flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-cloumn{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+//!MIXINS
+
+@mixin flex ($flex, $justify, $align){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//!CONDICIONALES

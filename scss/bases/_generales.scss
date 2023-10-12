@@ -24,17 +24,68 @@ body {
 
     
 }
+/* CONTACTO MAIN BOOTSTRAP */
+.contacto-main{
+    background-color: $color-principal;
+    grid-area: main;
 
-.grid-contenedor-contacto{
-    width: 100%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 250px 100 px 400px 150px;
-    grid-template-areas: 
-    "header header header"
-    "nav nav nav"
-    "main main aside"
-    "footer footer footer"
-    ;
+    .first_col {
+        background-color: $color-contacto-form;
+        height: 550px;
+        box-shadow: $color-terciario 0px 5px 15px;
+        position:initial;
+        width: 550px;
+        left: 155px;
+        top: 171px;
+        border-radius: 20px;
+
+        .btn-primary {
+            background-color: $color-botonpri;
+            border: $color-botonpri;
+
+            .form-control {
+                height: 52px;
+                background: $color-principal;
+                font-size: 14px;
+                border-radius: 2px;
+                -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+                border: 1px solid $color-botonpri;
+
+                .form-control[type=text]:focus {
+                    border: 2px solid $color-parrafos;
+                    }
+            }
+        
+        }
+
+    }
 }
+
+        .img-fluid {
+            border-radius: 20px;
+            display: flex;
+            position: -webkit-sticky;
+            flex-wrap: wrap;
+            margin-left: 70px;
+        }
+
+        .row-last {
+            width: 100% ;
+            position:sticky ;
+            left: 350px;
+            top: 50px;
+            height: 100px;
+            padding-bottom: 100px;
+            background-color: $color-botonpri;
+            border-radius: 20px;
+            text-align: center;
+        
+        }
+        
+
+        
+        .btn-primary:hover {
+            background-color: $color-terciario!important;
+        }
+        

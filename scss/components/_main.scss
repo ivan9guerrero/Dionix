@@ -5,51 +5,51 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 70px;
-}
 
-.category-item {
-    flex-grow: 1;
-    flex-basis: 0;
-    min-width: 33.33%;
-    border: 2px solid white;
-    box-sizing: border-box;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
 
-    &:hover {
-        opacity: 0.7;
-        background-color: rgb(142, 25, 25);
-    }
+    .category-item {
+        flex-grow: 1;
+        flex-basis: 0;
+        min-width: 33.33%;
+        border: 2px solid white;
+        box-sizing: border-box;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
 
-    a {
         &:hover {
-            color: black;
+            opacity: 0.7;
+        
+        
+
+        a {
+            &:hover {
+                color: $color-terciario;
+            }
+        }
         }
     }
-}
+    }
 
 
-.category-item-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.category-item-inner>div {
-    padding: 5px 10px;
-    background: rgba(0, 0, 0, 0.484);
-    color: white;
-    border-radius: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+        .category-item-inner {
+        @extend %flex-center;
+            height: 100%;
+                div {
+                padding: 5px 10px;
+                background: $color-terciario;
+                color: white;
+                border-radius: 10px;
+                font-size: nth($font-size, 5);
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+        
 
 
-/*!--------MAIN MAS Productos----------*/
+/*!--------MAIN Productos Destacados----------*/
 
 .productos-destacados {
     margin-top: 30px;
@@ -58,41 +58,40 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
-}
+
+    .productos-destacados-item {
+        border-radius: 5px;
+        overflow: hidden;
+        text-align: center;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+    .productos-destacados-item-image {
+        height: 300px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+    }
+    }
+
 
 .productos-destacados-title {
     text-align: center;
     margin-top: 20px;
-}
-
-.productos-destacados-item {
-    border-radius: 5px;
-    overflow: hidden;
-    text-align: center;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-}
-
-.productos-destacados-item-image {
-    height: 300px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.productos-destacados-item>.title {
-    font-size: 20px;
     font-weight: bold;
 }
 
-.productos-destacados-item>.description {
-    color: #666;
+.title {
+    font-size: nth($font-size, 3);
+    font-weight: bold;
 }
 
-.productos-destacados-item>.price {
-    font-style: italic;
-
+.description {
+    color: $color-parrafos;
 }
+
+
 
 button {
     &:hover {
@@ -101,13 +100,13 @@ button {
     }
 
     outline: none;
-    background: black;
-    color: white;
+    background: $color-terciario;
+    color: $color-principal;
     padding: 10px 15px;
     cursor: pointer;
     font-weight: bold;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: nth($font-size, 2);
     margin: 10px 0;
 
 
@@ -119,17 +118,15 @@ button {
 
 
 .about-us {
-    width: 100%;
+    max-width: 100%;
     padding: 78px 0px;
-    background-color: white;
+    background-color: $color-principal;
     overflow: hidden;
 }
 
 .info-nosotros {
-    width: 100%;
-    max-width: 95%;
-    display: flex;
-    align-items: center;
+    max-width: 100%;
+    @include flex (flex, space-between, center);
 
     img {
         margin-right: 30px;
@@ -140,16 +137,19 @@ button {
     }
 
     .nosotros-text {
+        padding: 30px;
         h1 {
-            color: #333;
-            font-size: 40px;
+            color: $color-nosotros;
+            font-size: nth($font-size, 6);
             margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
         }
 
         p {
-            color: #666;
+            color: $color-parrafos;
             letter-spacing: 1px;
-            font-size: 15px;
+            font-size: nth($font-size, 1);
             line-height: 1.5;
             margin-bottom: 45px;
             text-align: justify;
@@ -158,6 +158,8 @@ button {
             opacity: 0; 
             visibility: hidden; 
             transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; 
+            margin-right: 30px;
+            margin-left: 30px;
         }
     }
 }
@@ -168,19 +170,13 @@ button {
     visibility: visible; 
 }
 
-
-
-
-
-
-
 .mapa {
-    background-color: #ffffff;
+    background-color:$color-principal;
 
     .text-ubicacion {
         text-align: center;
         margin-bottom: 30px;
-        background-color: white;
+        background-color: $color-principal;
         transform: translateX(-100%);
         transition: transform 0.5s ease-in-out;
     }
@@ -207,11 +203,15 @@ button {
         transition: transform 0.5s ease-in-out;
     }
     .medios-pagos{
-        width: 100%;
+        @extend %flex-center;
+        img{
+
+        
+        width: 80%;
         height: 100%;
-        display: flex;
-        justify-content:  center;
         margin-bottom: 40px;
+        border-radius: 15px;
+        }
     }
 
 &:hover .text-ubicacion {
@@ -219,3 +219,278 @@ button {
 &:hover .text-pagos{
         transform: translateX(0);}
 }
+
+/*!--------MAIN RELOJES----------*/
+
+.contenedor-relojes-items{
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+    @include flex (flex, space-between, center);
+    contain: paint;
+    margin-bottom: 50px;
+}
+/* SECCION CONTENEDOR DE ITEMS */
+.contenedor-relojes-items{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap:30px;
+    grid-row-gap: 30px;
+    width: 100%;
+    transition: .3s;
+
+    .item{
+        max-width: 200px;
+        margin: auto;
+        border: 1px solid $color-parrafos;
+        border-radius: 10px;
+        padding: 20px;
+        transition: .3s;
+
+        .img-item{
+            width: 100%;
+}
+
+}
+
+}
+.item {
+    &:hover {
+        box-shadow: 0 0 10px $color-parrafos;
+        scale: 1.05;
+    }
+
+}
+.titulo-item{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+.precio-item{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: nth($font-size, 4);
+}
+
+.boton-item{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: map-get($boton, fondo);
+    color: map-get($boton, color-texto);
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boton-item-mas{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: map-get($boton, fondo);
+    color: map-get($boton, color-texto);
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 542px;
+    
+}
+
+.titulo-relojes{
+    margin-top: 60px;
+    h1{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+
+/* MAIN SERVICE */
+
+
+.reparaciones {
+    margin-top: 20px;
+    width: 100%;
+    padding: 60px 0px;
+    background-color: $color-principal;
+    overflow: hidden;
+}
+.titulo-repara {
+    text-align: center;
+    opacity: 0.5; 
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    background: $color-principal; 
+    padding: 10px;
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+.titulo-repara:hover {
+    opacity: 1;
+}
+
+
+.reparacion-celular{
+    margin-top: 90px;
+    width: 100%;
+    max-width: 95%;
+    @extend %flex-center;
+
+    img {
+        margin-right: 30px;
+        width: 65%;
+        height: auto;
+        padding: 50px;
+        float: left;
+    }
+
+    .reparacion-cel-text {
+        width: 60%;
+        h2 {
+            color: $color-nosotros;
+            font-size: nth($font-size, 6);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            color: $color-parrafos;
+            letter-spacing: 1px;
+            font-size: nth($font-size, 1);
+            line-height: 1.5;
+            margin-bottom: 45px;
+            text-align: justify;
+            text-transform: inherit;
+            float: left;
+            opacity: 1; 
+            
+        }
+    }
+}
+.reparacion-reloj{
+
+    width: 100%;
+    max-width: 95%;
+    background-color: $color-principal;
+    overflow: hidden;
+    @extend %flex-center;
+    
+}
+
+.reparacion-relojes{
+    margin-top: 90px;
+    width: 100%;
+    max-width: 95%;
+
+
+
+    img {
+        
+        width: 90%;
+        height: auto;
+        padding: 50px;
+        float: right;
+        
+    }
+}
+
+    .reparacion-rel-text {
+        margin-left: 30px;
+        text-align: justify;
+        width: 60%;
+
+        h2 {
+            color: $color-nosotros;
+            font-size: nth($font-size, 6);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            color: $color-parrafos;
+            letter-spacing: 1px;
+            font-size: nth($font-size, 1);
+            line-height: 1.5;
+            margin-bottom: 45px;
+            text-align: justify;
+            text-transform: inherit;
+            float: right;
+            opacity: 1; 
+            
+        }
+    }
+
+
+    .reparacion-joyas{
+
+        width: 100%;
+        max-width: 95%;
+        background-color: $color-principal;
+        overflow: hidden;
+        @include flex (flex, space-between, center)
+    }
+    
+    .reparaciones-joyas{
+        margin-top: 90px;
+        width: 100%;
+        max-width: 95%;
+    
+        img {
+
+            width: 100%;
+            height: auto;
+            padding: 50px;
+            float: right;
+        }
+    }
+    
+        .reparacion-joyas-text {
+            margin-left: 30px;
+            text-align: justify;
+            width: 60%;
+    
+            h2 {
+                color: $color-nosotros;
+                font-size: nth($font-size, 6);
+                margin-bottom: 20px;
+                text-align: center;
+            }
+    
+            p {
+                color: $color-parrafos;
+                letter-spacing: 1px;
+                font-size: 15px;
+                line-height: 1.5;
+                margin-bottom: 45px;
+                text-align: justify;
+                text-transform: inherit;
+                float: left;
+                opacity: 1; 
+                
+            }
+        }
+
+        .grid-contenedor-contacto{
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 250px 100 px 400px 150px;
+            grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "main main aside"
+            "footer footer footer"
+            ;
+        }
+
+
+
+
+
+        
+
