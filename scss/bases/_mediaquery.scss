@@ -18,7 +18,18 @@
     .category-item {
         min-width: 50%;
     }
+    .img-fluid {
+        height: auto ;
+        max-width: 80%;
+        border-radius: 20px;
+        display: flex;
+        position:unset;
+        flex-wrap: wrap;
+        margin-left: 80px;
+        margin-right: 40px;
+        align-items: center;
 
+}
 }
 
 @media screen and (max-width:992px){
