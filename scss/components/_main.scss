@@ -25,7 +25,7 @@
 
         a {
             &:hover {
-                color: $color-principal;
+                color: $color-terciario;
             }
         }
         }
@@ -155,9 +155,6 @@ button {
             text-align: justify;
             text-transform: inherit;
             float: left;
-            opacity: 0; 
-            visibility: hidden; 
-            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; 
             margin-right: 30px;
             margin-left: 30px;
         }
@@ -165,21 +162,22 @@ button {
 }
 
 
-.about-us:hover .nosotros-text p {
-    opacity: 1; 
-    visibility: visible; 
+
+.text-ubicacion {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: $color-principal;
+
 }
 
 .mapa {
     background-color:$color-principal;
 
-    .text-ubicacion {
+
         text-align: center;
         margin-bottom: 30px;
         background-color: $color-principal;
-        transform: translateX(-100%);
-        transition: transform 0.5s ease-in-out;
-    }
+
     .map-responsive {
         overflow: hidden;
         position: relative;
@@ -199,8 +197,7 @@ button {
         text-align: center;
         margin-bottom: 60px;
         margin-top: 60px;
-        transform: translateX(-100%); 
-        transition: transform 0.5s ease-in-out;
+
     }
     .medios-pagos{
         @extend %flex-center;
@@ -214,12 +211,8 @@ button {
         }
     }
 
-&:hover .text-ubicacion {
-    transform: translateX(0);}
-&:hover .text-pagos{
-        transform: translateX(0);}
-}
 
+}
 /*!--------MAIN RELOJES----------*/
 
 .contenedor-relojes-items{
