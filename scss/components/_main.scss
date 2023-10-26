@@ -20,33 +20,34 @@
 
         &:hover {
             opacity: 0.7;
-        
-        
 
-        a {
-            &:hover {
-                color: $color-contacto-form;
+
+
+            a {
+                &:hover {
+                    color: $color-contacto-form;
+                }
             }
         }
-        }
     }
-    }
+}
 
 
-        .category-item-inner {
-        @extend %flex-center;
-            height: 100%;
-                div {
-                padding: 5px 10px;
-                background: $color-terciario;
-                color: white;
-                border-radius: 10px;
-                font-size: nth($font-size, 5);
-                font-weight: bold;
-                text-transform: uppercase;
-            }
-        }
-        
+.category-item-inner {
+    @extend %flex-center;
+    height: 100%;
+
+    div {
+        padding: 5px 10px;
+        background: $color-terciario;
+        color: white;
+        border-radius: 10px;
+        font-size: nth($font-size, 5);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
 
 
 /*!--------MAIN Productos Destacados----------*/
@@ -65,15 +66,16 @@
         text-align: center;
         box-sizing: border-box;
         border: 1px solid #ddd;
-    .productos-destacados-item-image {
-        height: 300px;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
 
+        .productos-destacados-item-image {
+            height: 300px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
     }
-    }
-    }
+}
 
 
 .productos-destacados-title {
@@ -127,9 +129,9 @@ button {
 .info-nosotros {
     max-width: 100%;
     @include flex (flex, space-between, center);
-    
+
     img {
-        
+
         margin-right: 30px;
         width: 65%;
         height: auto;
@@ -139,6 +141,7 @@ button {
 
     .nosotros-text {
         padding: 30px;
+
         h1 {
             color: $color-nosotros;
             font-size: nth($font-size, 6);
@@ -160,117 +163,132 @@ button {
             margin-left: 30px;
         }
 
-            -webkit-animation: bounce-in-top 1.1s both;
-                    animation: bounce-in-top 1.1s both;
+        -webkit-animation: bounce-in-top 1.1s both;
+        animation: bounce-in-top 1.1s both;
+    }
+
+
+    @-webkit-keyframes bounce-in-top {
+        0% {
+            -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+            opacity: 0;
+        }
+
+        38% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+            opacity: 1;
+        }
+
+        55% {
+            -webkit-transform: translateY(-65px);
+            transform: translateY(-65px);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+
+        72% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+
+        81% {
+            -webkit-transform: translateY(-28px);
+            transform: translateY(-28px);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+
+        90% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+
+        95% {
+            -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+    }
+
+    @keyframes bounce-in-top {
+        0% {
+            -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+            opacity: 0;
+        }
+
+        38% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+            opacity: 1;
+        }
+
+        55% {
+            -webkit-transform: translateY(-65px);
+            transform: translateY(-65px);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+
+        72% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+
+        81% {
+            -webkit-transform: translateY(-28px);
+            transform: translateY(-28px);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+
+        90% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+
+        95% {
+            -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
         }
 
 
- @-webkit-keyframes bounce-in-top {
-    0% {
-      -webkit-transform: translateY(-500px);
-              transform: translateY(-500px);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-      opacity: 0;
-    }
-    38% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-      opacity: 1;
-    }
-    55% {
-      -webkit-transform: translateY(-65px);
-              transform: translateY(-65px);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    72% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    81% {
-      -webkit-transform: translateY(-28px);
-              transform: translateY(-28px);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    90% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    95% {
-      -webkit-transform: translateY(-8px);
-              transform: translateY(-8px);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-  }
-  @keyframes bounce-in-top {
-    0% {
-      -webkit-transform: translateY(-500px);
-              transform: translateY(-500px);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-      opacity: 0;
-    }
-    38% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-      opacity: 1;
-    }
-    55% {
-      -webkit-transform: translateY(-65px);
-              transform: translateY(-65px);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    72% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    81% {
-      -webkit-transform: translateY(-28px);
-              transform: translateY(-28px);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    90% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    95% {
-      -webkit-transform: translateY(-8px);
-              transform: translateY(-8px);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
 
-
-        
         h1 {
             color: $color-nosotros;
             font-size: nth($font-size, 6);
@@ -296,118 +314,128 @@ button {
 
 
 .mapa {
-    background-color:$color-principal;
-
-    .text-ubicacion{
-        -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-                animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    }
-
-@-webkit-keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-}
+    background-color: $color-principal;
 
     .text-ubicacion {
-        text-align: center;
-        margin-bottom: 30px;
-        background-color: $color-principal;
-        
+        -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
 
-        
+    @-webkit-keyframes tracking-in-expand {
+        0% {
+            letter-spacing: -0.5em;
+            opacity: 0;
+        }
+
+        40% {
+            opacity: 0.6;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes tracking-in-expand {
+        0% {
+            letter-spacing: -0.5em;
+            opacity: 0;
+        }
+
+        40% {
+            opacity: 0.6;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.text-ubicacion {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: $color-principal;
+
+
+
 
 }
-    .map-responsive {
-        overflow: hidden;
-        position: relative;
-        height: 400px; 
-        margin-bottom: none;
-    }
 
-    .map-responsive iframe {
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        position: absolute;
+.map-responsive {
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+    margin-bottom: none;
+}
 
-    }
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 
-    .text-pagos{
-        
-        text-align: center;
-        margin-bottom: 60px;
-        margin-top: 60px;
-        
-            -webkit-animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                    animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        }
+}
+
+.text-pagos {
+
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 60px;
+
+    -webkit-animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
 @-webkit-keyframes focus-in-contract {
     0% {
-      letter-spacing: 1em;
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
+        letter-spacing: 1em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
     }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
-  }
-  @keyframes focus-in-contract {
-    0% {
-      letter-spacing: 1em;
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
-  }
-  
-    .medios-pagos{
-        @extend %flex-center;
-        img{
 
-        
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes focus-in-contract {
+    0% {
+        letter-spacing: 1em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.medios-pagos {
+    @extend %flex-center;
+
+    img {
+
+
         width: 80%;
         height: 100%;
         margin-bottom: 40px;
         border-radius: 15px;
-        }
     }
+}
 
 
 
 /*!--------MAIN RELOJES----------*/
 
-.contenedor-relojes-items{
+.contenedor-relojes-items {
     max-width: 1200px;
     padding: 10px;
     margin: auto;
@@ -415,17 +443,18 @@ button {
     contain: paint;
     margin-bottom: 50px;
 }
+
 /* SECCION CONTENEDOR DE ITEMS */
-.contenedor-relojes-items{
+.contenedor-relojes-items {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-gap:30px;
+    grid-gap: 30px;
     grid-row-gap: 30px;
     width: 100%;
     transition: .3s;
 
-    .item{
+    .item {
         max-width: 200px;
         margin: auto;
         border: 1px solid $color-parrafos;
@@ -433,13 +462,14 @@ button {
         padding: 20px;
         transition: .3s;
 
-        .img-item{
+        .img-item {
             width: 100%;
-}
+        }
+
+    }
 
 }
 
-}
 .item {
     &:hover {
         box-shadow: 0 0 10px $color-parrafos;
@@ -447,20 +477,22 @@ button {
     }
 
 }
-.titulo-item{
+
+.titulo-item {
     display: block;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
 }
-.precio-item{
+
+.precio-item {
     display: block;
     text-align: center;
     font-weight: bold;
     font-size: nth($font-size, 4);
 }
 
-.boton-item{
+.boton-item {
     display: block;
     margin: 10px auto;
     border: none;
@@ -470,7 +502,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-.boton-item-mas{
+
+.boton-item-mas {
     display: block;
     margin: 10px auto;
     border: none;
@@ -481,15 +514,17 @@ button {
     cursor: pointer;
     align-items: center;
     margin-left: 542px;
-    
+
 }
 
-.titulo-relojes{
+.titulo-relojes {
     margin-top: 60px;
-    h1{
+
+    h1 {
         text-align: center;
         margin-bottom: 50px;
     }
+
     font-weight: bold;
 }
 
@@ -504,23 +539,25 @@ button {
     background-color: $color-principal;
     overflow: hidden;
 }
+
 .titulo-repara {
     text-align: center;
-    opacity: 0.5; 
-    position: -webkit-sticky; 
+    opacity: 0.5;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background: $color-principal; 
+    background: $color-principal;
     padding: 10px;
     z-index: 1;
     transition: opacity 0.5s ease-in-out;
 }
+
 .titulo-repara:hover {
     opacity: 1;
 }
 
 
-.reparacion-celular{
+.reparacion-celular {
     margin-top: 90px;
     width: 100%;
     max-width: 95%;
@@ -534,8 +571,10 @@ button {
         float: left;
     }
 
+
     .reparacion-cel-text {
         width: 60%;
+
         h2 {
             color: $color-nosotros;
             font-size: nth($font-size, 6);
@@ -552,22 +591,23 @@ button {
             text-align: justify;
             text-transform: inherit;
             float: left;
-            opacity: 1; 
-            
+            opacity: 1;
+
         }
     }
 }
-.reparacion-reloj{
+
+.reparacion-reloj {
 
     width: 100%;
     max-width: 95%;
     background-color: $color-principal;
     overflow: hidden;
     @extend %flex-center;
-    
+
 }
 
-.reparacion-relojes{
+.reparacion-relojes {
     margin-top: 90px;
     width: 100%;
     max-width: 95%;
@@ -575,109 +615,102 @@ button {
 
 
     img {
-        
+
         width: 90%;
         height: auto;
         padding: 50px;
         float: right;
 
-        
+
     }
 }
 
-    .reparacion-rel-text {
-        margin-left: 30px;
+.reparacion-rel-text {
+    margin-left: 30px;
+    text-align: justify;
+    width: 60%;
+
+    h2 {
+        color: $color-nosotros;
+        font-size: nth($font-size, 6);
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    p {
+        color: $color-parrafos;
+        letter-spacing: 1px;
+        font-size: nth($font-size, 1);
+        line-height: 1.5;
+        margin-bottom: 45px;
         text-align: justify;
-        width: 60%;
+        text-transform: inherit;
+        float: right;
+        opacity: 1;
 
-        h2 {
-            color: $color-nosotros;
-            font-size: nth($font-size, 6);
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        p {
-            color: $color-parrafos;
-            letter-spacing: 1px;
-            font-size: nth($font-size, 1);
-            line-height: 1.5;
-            margin-bottom: 45px;
-            text-align: justify;
-            text-transform: inherit;
-            float: right;
-            opacity: 1; 
-            
-        }
     }
+}
 
 
-    .reparacion-joyas{
+.reparacion-joyas {
+
+    width: 100%;
+    max-width: 95%;
+    background-color: $color-principal;
+    overflow: hidden;
+    @include flex (flex, space-between, center)
+}
+
+.reparaciones-joyas {
+    margin-top: 90px;
+    width: 100%;
+    max-width: 95%;
+
+    img {
 
         width: 100%;
-        max-width: 95%;
-        background-color: $color-principal;
-        overflow: hidden;
-        @include flex (flex, space-between, center)
+        height: auto;
+        padding: 50px;
+        float: right;
     }
-    
-    .reparaciones-joyas{
-        margin-top: 90px;
-        width: 100%;
-        max-width: 95%;
-    
-        img {
+}
 
-            width: 100%;
-            height: auto;
-            padding: 50px;
-            float: right;
-        }
+.reparacion-joyas-text {
+    margin-left: 30px;
+    text-align: justify;
+    width: 60%;
+
+    h2 {
+        color: $color-nosotros;
+        font-size: nth($font-size, 6);
+        margin-bottom: 20px;
+        text-align: center;
     }
-    
-        .reparacion-joyas-text {
-            margin-left: 30px;
-            text-align: justify;
-            width: 60%;
-    
-            h2 {
-                color: $color-nosotros;
-                font-size: nth($font-size, 6);
-                margin-bottom: 20px;
-                text-align: center;
-            }
-    
-            p {
-                color: $color-parrafos;
-                letter-spacing: 1px;
-                font-size: 15px;
-                line-height: 1.5;
-                margin-bottom: 45px;
-                text-align: justify;
-                text-transform: inherit;
-                float: left;
-                opacity: 1; 
-                
-            }
-        }
 
-        .grid-contenedor-contacto{
-            width: 100%;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 250px 100 px 400px 150px;
-            grid-template-areas: 
-            "header header header"
-            "nav nav nav"
-            "main main aside"
-            "footer footer footer"
-            ;
-        }
+    p {
+        color: $color-parrafos;
+        letter-spacing: 1px;
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 45px;
+        text-align: justify;
+        text-transform: inherit;
+        float: left;
+        opacity: 1;
 
+    }
+}
 
-
-
-
-        
-
+.grid-contenedor-contacto {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px 100 px 400px 150px;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "main main aside"
+        "footer footer footer"
+    ;
+}
